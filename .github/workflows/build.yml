@@ -16,8 +16,6 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
-      - name: Setup NuGet Sources
-        run: dotnet nuget add source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --name github
       - name: Restore .NET Packages
         run: dotnet restore
       - name: Build .NET Solution
@@ -25,5 +23,5 @@ jobs:
       - name: Pack .NET Solution
         run: dotnet pack --no-build --output pack/
       - name: Public .NET Solution
-        run: dotnet nuget push pack/* --api-key ${{ secrets.GITHUB_TOKEN }} --source github
+        run: dotnet nuget push pack/* --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
         
