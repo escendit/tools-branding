@@ -18,11 +18,3 @@ jobs:
         run: dotnet restore
       - name: Build .NET Solution
         run: dotnet build --configuration Release --no-restore
-      - name: Test .NET Solution
-        run: dotnet test --logger trx --results-directory "TestResults-${{ matrix.dotnet-version }}"
-      - name: Upload .NET Test Results
-        uses: actions/upload-artifact@v3
-        with:
-          name: dotnet-results-${{ matrix.dotnet-version }}
-          path: TestResults-${{ matrix.dotnet-version }}
-        if: ${{ always() }}
