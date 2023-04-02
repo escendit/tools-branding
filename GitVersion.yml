@@ -1,4 +1,5 @@
 mode: Mainline
 branches:
   master:
+    increment: None
     tag: rc
