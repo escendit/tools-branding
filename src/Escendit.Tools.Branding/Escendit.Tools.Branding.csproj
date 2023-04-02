@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="Escendit.Tools.Branding.props" />
+    <PropertyGroup>
+        <DevelopmentDependency>true</DevelopmentDependency>
+        <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <IsPackable>true</IsPackable>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);NU5128</NoWarn>
+        <PackageDescription>Pre-populates NuGet Package with common default values.</PackageDescription>
+    </PropertyGroup>
+    <ItemGroup>
+        <!-- TFM -->
+        <None Pack="true" PackagePath="build" Include="Escendit.Tools.Branding.props" />
+        <None Pack="true" PackagePath="build" Include="Escendit.Tools.Branding.targets" />
+        <!-- TFMs -->
+        <None Pack="true" PackagePath="buildMultiTargeting" Include="Escendit.Tools.Branding.props" />
+        <None Pack="true" PackagePath="buildMultiTargeting" Include="Escendit.Tools.Branding.targets" />
+        <!-- Transitive -->
+        <None Pack="true" PackagePath="buildTransitive" Include="Escendit.Tools.Branding.props" />
+        <None Pack="true" PackagePath="buildTransitive" Include="Escendit.Tools.Branding.targets" />
+        <!-- Assets -->
+        <None Pack="true" PackagePath="" Include="assets/packageIcon.png" />
+        <None Pack="true" PackagePath="" Include="assets/LICENSE.txt" />
+        <None Pack="true" PackagePath="" Include="$(SolutionDir)/README.md" />
+    </ItemGroup>
+</Project>
