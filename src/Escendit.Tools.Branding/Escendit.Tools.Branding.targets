@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Project>
     <ItemGroup>
-        <None Pack="true" PackagePath="" Include="$([MSBuild]::NormalizePath('$(MSBuildThisFileDirectory)\..\LICENSE.txt'))" Visible="false">
+        <None Pack="true" PackagePath="" Include="$(MSBuildThisFileDirectory)\..\LICENSE.txt" Visible="false">
             <Link>LICENSE.txt</Link>
         </None>
-        <None Pack="true" PackagePath="" Include="$([MSBuild]::NormalizePath('$(MSBuildThisFileDirectory)\..\packageIcon.png'))" Visible="false">
+        <None Pack="true" PackagePath="" Include="$(MSBuildThisFileDirectory)\..\packageIcon.png" Visible="false">
             <Link>packageIcon.png</Link>
         </None>
     </ItemGroup>
