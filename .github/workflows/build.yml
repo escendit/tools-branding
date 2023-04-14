@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: '0'
-      - run: git checkout HEAD^
+      - run: git checkout main
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v0
         with:
@@ -35,9 +35,9 @@ jobs:
         run: dotnet pack --no-build --output pack/
       - name: Publish .NET Solution to GitHub Packages
         continue-on-error: true
-        run: dotnet nuget push pack/* --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
+        run: dotnet nuget push pack/* --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }} --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
       - name: Publish .NET Solution to NuGet.org
         continue-on-error: true
-        run: dotnet nuget push pack/* --api-key ${{ secrets.NUGET_ORG_KEY }} --source nuget
+        run: dotnet nuget push pack/* --skip-duplicate --api-key ${{ secrets.NUGET_ORG_KEY }} --source nuget
         
         
