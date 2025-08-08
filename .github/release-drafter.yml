@@ -18,8 +18,8 @@ categories:
     labels:
       - "bug"
   - title: "🧰 Maintenance"
-      labels:
-        - "maintenance"
+    labels:
+      - "maintenance"
   - title: "🚨 Security Updates"
     labels:
       - "security"
