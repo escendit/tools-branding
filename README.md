@@ -38,7 +38,7 @@ You can modify these properties by updating your .csproj or .vbproj file as desc
 This package includes the following assets:
 
 - PackageIcon: `assets/packageIcon.png`
-- License: `assets/LICENSE.txt`
+- License: `assets/LICENSE`
 - Readme file: `README.md`
 
 To access the assets, use the relative paths shown above.
@@ -50,4 +50,4 @@ To contribute code, fork the repository and submit a pull request.
 Please ensure that your code follows the project's coding standards and is thoroughly tested.
 
 ## License
-This package is released under the MIT License. See the LICENSE.txt file for details.
+Licensed under Apache License 2.0. See the LICENSE file for the complete license text.

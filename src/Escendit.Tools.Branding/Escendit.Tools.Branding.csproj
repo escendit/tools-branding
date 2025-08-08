@@ -24,7 +24,7 @@
         <None Pack="true" PackagePath="buildTransitive" Include="Escendit.Tools.Branding.targets" />
         <!-- Assets -->
         <None Pack="true" PackagePath="" Include="assets/packageIcon.png" />
-        <None Pack="true" PackagePath="" Include="assets\LICENSE" />
+        <None Pack="true" PackagePath="" Include="assets/LICENSE" />
         <None Pack="true" PackagePath="" Include="$(SolutionDir)/README.md" />
     </ItemGroup>
 </Project>
