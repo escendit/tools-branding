@@ -2,6 +2,6 @@
 <Project>
     <PropertyGroup>
         <RepositoryType>git</RepositoryType>
-        <RepositoryUrl>https://github.com/escendit/Escendit.Tools.Branding</RepositoryUrl>
+        <RepositoryUrl>https://github.com/escendit/tools-branding</RepositoryUrl>
     </PropertyGroup>
 </Project>
