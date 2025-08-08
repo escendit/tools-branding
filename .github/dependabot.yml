@@ -1,6 +1,41 @@
 version: 2
 updates:
-  - package-ecosystem: "nuget"
-    directory: "/"
+  # GitHub Actions
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: "weekly"
+      interval: weekly
+      day: sunday
+      timezone: Europe/Zurich
+      time: "01:30"
+    labels:
+      - dependencies/github-actions
+
+  # .NET SDK
+  - package-ecosystem: dotnet-sdk
+    directory: /
+    schedule:
+      interval: weekly
+      day: sunday
+      timezone: Europe/Zurich
+      time: "02:00"
+    labels:
+      - dependencies/dotnet-sdk
+    groups:
+      dotnet-next:
+        update-types:
+          - major
+          - minor
+      dotnet-updates:
+        update-types:
+          - patch
+
+  # NuGet
+  - package-ecosystem: nuget
+    directory: /
+    schedule:
+      interval: daily
+      timezone: Europe/Zurich
+      time: "03:00"
+    labels:
+      - dependencies/nuget

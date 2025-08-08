@@ -3,8 +3,8 @@
     <PropertyGroup>
         <Authors>Escendit</Authors>
         <PackageIcon>packageIcon.png</PackageIcon>
-        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <Copyright>Copyright © Escendit Ltd</Copyright>
+        <Copyright>Copyright © Escendit GmbH</Copyright>
     </PropertyGroup>
 </Project>
