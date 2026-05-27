@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
+    <!-- SourceLink -->
     <PropertyGroup>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/escendit/tools-branding</RepositoryUrl>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+    <!-- NuGet Restore -->
+    <PropertyGroup>
+        <RestoreLockedMode Condition="'$(CI)' == 'true'">true</RestoreLockedMode>
+        <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     </PropertyGroup>
 </Project>

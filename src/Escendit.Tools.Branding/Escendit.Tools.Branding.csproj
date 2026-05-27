@@ -7,6 +7,7 @@
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <IsPackable>true</IsPackable>
         <IncludeBuildOutput>false</IncludeBuildOutput>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <NoWarn>$(NoWarn);NU5128</NoWarn>
         <Description>Provides default branding properties and assets for organization's NuGet projects.</Description>
