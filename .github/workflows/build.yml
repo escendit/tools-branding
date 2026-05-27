@@ -48,7 +48,7 @@ jobs:
         run: echo "${VERSION}"
 
       - name: Restore .NET Packages
-        run: dotnet restore
+        run: dotnet restore --locked-mode
 
       - name: Build .NET Solution
         run: dotnet build --configuration Release --no-restore /p:Version=${VERSION}
