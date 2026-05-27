@@ -10,7 +10,7 @@
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <NoWarn>$(NoWarn);NU5128</NoWarn>
-        <Description>Provides default branding properties and assets for organization's NuGet projects.</Description>
+        <Description>Automatically applies default branding MSBuild properties and injects shared license and icon assets into consuming NuGet packages.</Description>
         <PackageTags>branding;defaults;icons;nuget;development</PackageTags>
     </PropertyGroup>
     <ItemGroup>
@@ -26,6 +26,6 @@
         <!-- Assets -->
         <None Pack="true" PackagePath="" Include="assets/packageIcon.png" />
         <None Pack="true" PackagePath="" Include="assets/LICENSE" />
-        <None Pack="true" PackagePath="" Include="$(SolutionDir)/README.md" />
+        <None Pack="true" PackagePath="" Include="README.md" />
     </ItemGroup>
 </Project>
